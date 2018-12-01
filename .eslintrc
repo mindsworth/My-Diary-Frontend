@@ -7,7 +7,8 @@
     "root": true,
       "extends": [
         "airbnb-base",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:prettier/recommended"
       ],
       "env": {
         "es6": true,
@@ -59,7 +60,16 @@
                 "MethodDefinition": false,
                 "ClassDeclaration": true
             }
-        }]
+        }],
+        "prettier/prettier": [
+          "error",
+          {
+            "tailingComma": "es5",
+            "singleQuote": true,
+            "printWidth": 120
+          }
+
+        ]
       }
     }
     
