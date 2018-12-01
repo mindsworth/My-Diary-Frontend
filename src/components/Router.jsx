@@ -1,34 +1,35 @@
 // react libraries
-import React, { Component } from 'react';
+import React, { Fragment } from 'react';
 
-// third party libraries
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+// third party library
+import { Switch, Route, Router, Link } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 
-// initialState
-import initialState from '../store/initialState';
+// components
+import Home from '../view/home/Home';
+import Login from '../view/login/Login';
+import NotFound from './NotFound';
+
+const history = createBrowserHistory();
 
 /**
  * @export
  * @class AppRouter
  * @extends {Component}
  */
-export class AppRouter extends Component {
-  render() {
-    return (
+const AppRouter = () => (
+  <Router history={history}>
+    <Fragment>
       <div>
-        <h1>React Setup: is Authenticated === {`${this.props.isAuth}`}</h1>
+        <Link to="/">Home</Link>
+        <Link to="/login">Login</Link>
       </div>
-    );
-  }
-}
-
-AppRouter.propTypes = {
-  isAuth: PropTypes.bool
-};
-
-const mapStateToProps = (state = initialState) => ({
-  isAuth: state.isAuthReducer.auth.isAuth
-});
-
-export default connect(mapStateToProps)(AppRouter);
+      <Switch>
+        <Route path="/" component={Home} exact={true} />
+        <Route path="/login" component={Login} />
+        <Route path="*" component={NotFound} />
+      </Switch>
+    </Fragment>
+  </Router>
+);
+export default AppRouter;
