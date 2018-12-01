@@ -1,6 +1,7 @@
 // react libraries
 import React from 'react';
 
+// components
 import { Link } from 'react-router-dom';
 
 const NotFound = () => (
