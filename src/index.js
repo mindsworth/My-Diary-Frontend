@@ -2,10 +2,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// third party libraries
+import { Provider } from 'react-redux';
+
+// state
+import configureStore from './store/configureStore';
+
 // components
 import AppRouter from './components/Router';
 
+const store = configureStore();
+
 ReactDOM.render(
-  <AppRouter />,
+  <Provider store={store}>
+    <AppRouter />
+  </Provider>,
   document.getElementById('root')
 );
