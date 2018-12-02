@@ -8,14 +8,14 @@ import React, { Component } from 'react';
  */
 export class Home extends Component {
   state = {
-    isAuth: true
+    user: true
   };
 
   render() {
-    const { isAuth } = this.state;
+    const { user } = this.state;
     return (
       <div>
-        <h1>This is the landing page {`${isAuth}`}</h1>
+        <h1>This is the landing page {`${user}`}</h1>
       </div>
     );
   }
