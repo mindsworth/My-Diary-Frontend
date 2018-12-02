@@ -35,9 +35,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'index.html')
     }),
-    new CopyWebpackPlugin([
-      { from: 'public/images', to: 'images' }
-    ]),
+    new CopyWebpackPlugin([{ from: 'public/images', to: 'images' }]),
     new Dotenv()
   ],
   module: {
@@ -49,17 +47,12 @@ module.exports = {
       },
       {
         test: /\.(css|scss)$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
-        ],
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
         include: path.join(__dirname, '..', 'public'),
-        loader: 'file-loader',
-
+        loader: 'file-loader'
       },
       {
         test: /\.(otf|eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
