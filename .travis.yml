@@ -15,4 +15,4 @@ after_script:
 - "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
 env:
   global:
-  - secure: 
+  - secure: c951ae2d3fe7bd67496593f59082b2ed7bd1c463b4a5061b979cd6e78dd7db5d
