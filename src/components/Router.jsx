@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react';
 
 // third party library
-import { Switch, Route, Router, Link } from 'react-router-dom';
+import { Switch, Route, Router } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
 // components
@@ -20,10 +20,6 @@ const history = createBrowserHistory();
 const AppRouter = () => (
   <Router history={history}>
     <Fragment>
-      <div>
-        <Link to="/">Home</Link>
-        <Link to="/login">Login</Link>
-      </div>
       <Switch>
         <Route path="/" component={Home} exact={true} />
         <Route path="/login" component={Login} />

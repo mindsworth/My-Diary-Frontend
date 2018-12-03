@@ -1,0 +1,100 @@
+// GLOBAL STYLING
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+  background: none;
+  box-shadow: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  background-color: #F3F1F0;
+  letter-spacing: .05rem;
+  line-height: 2rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 5.5rem;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #222222;
+}
+
+.navLink {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #222222;
+
+  &:hover {
+    text-decoration: none;
+    color: #FF6839;
+  }
+}
+
+.indexLink {
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #222222;
+
+  &:hover {
+    text-decoration: none;
+    color: #FF6839;
+  }
+}
+
+.formSubLink {
+  padding-left: .5rem;
+
+  &:hover {
+    text-decoration: none;
+    color: #FF6839;
+  }
+}
+
+.border {
+  border: 1px solid #000;
+}
+
+.Toastify {
+  position: absolute;
+  font-weight: 600;
+  
+  .Toastify__toast {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2);
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    color: #ef494f;
+  }
+}
+
+.error {
+  border: 1px solid #ef494f!important;
+  padding-left: 1rem!important;
+  border-radius: 5px;
+
+  &::placeholder {
+    color: #ef494f;
+  }
+}
