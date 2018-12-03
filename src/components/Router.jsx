@@ -7,9 +7,9 @@ import { createBrowserHistory } from 'history';
 
 // components
 import Home from '../view/home/Home';
-import Login from '../view/login/Login';
+import Login from '../view/authentication/login/Login';
 import NotFound from './NotFound';
-import Signup from '../view/signup/Signup';
+import Signup from '../view/authentication/signup/Signup';
 import Dashboard from './dashboard/Dashboard';
 
 const history = createBrowserHistory();
