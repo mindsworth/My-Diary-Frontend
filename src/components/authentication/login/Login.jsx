@@ -131,7 +131,7 @@ export class Login extends Component {
                 onChange={this.handleOnChange}
                 placeholder="Email"
                 value={this.state.user.email}
-                autoComplete="false"
+                autoComplete="off"
                 className={classNames('', {
                   error: !!email
                 })}
