@@ -3,6 +3,12 @@
  */
 const initialState = {
   auth: {
+    user: {},
+    signup: {
+      isLoading: false,
+      isRegistered: false,
+      errorResponse: null
+    },
     isAuth: false
   }
 };
