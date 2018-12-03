@@ -7,11 +7,13 @@ import { Link, Redirect } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import classNames from 'classnames';
 import Loader from 'react-loader-spinner';
-import signpValidation from '../../helpers/signupValidation';
+
+// helper
+import Validator from '../../../helpers/validator';
 
 // components
-import Button from '../reusables/buttons/ButtonCSS';
-import '../../../node_modules/react-toastify/dist/ReactToastify.min.css';
+import Button from '../../reusables/buttons/ButtonCSS';
+import '../../../../node_modules/react-toastify/dist/ReactToastify.min.css';
 import {
   LayoutAuth,
   FormWrap,
@@ -24,7 +26,9 @@ import {
   Title,
   Label,
   Loading
-} from './AuthenticationCSS';
+} from '../AuthenticationCSS';
+
+const { signupValidator } = Validator;
 
 /**
  *
@@ -61,7 +65,7 @@ export class Signup extends Component {
   handleOnSubmit = event => {
     event.preventDefault();
     const { user } = this.state;
-    const validate = signpValidation(user);
+    const validate = signupValidator(user);
 
     const { vError } = this.state;
 
@@ -187,6 +191,7 @@ export class Signup extends Component {
                   onChange={this.handleOnChange}
                   name="password_confirmation"
                   type="password"
+                  autoComplete="false"
                   placeholder="Confirm password"
                   className={classNames('', {
                     error: !!password
@@ -205,7 +210,6 @@ export class Signup extends Component {
 
 Signup.propTypes = {
   signupAction: PropTypes.func,
-  signupState: PropTypes.object,
   errorResponse: PropTypes.object,
   isLoading: PropTypes.bool,
   isRegistered: PropTypes.bool

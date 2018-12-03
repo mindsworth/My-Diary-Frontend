@@ -8,17 +8,17 @@ import { Provider } from 'react-redux';
 import { shallow } from 'enzyme';
 
 // component
-import Signup from '../../components/authentication/signup/Signup';
+import Login from '../../components/authentication/login/Login';
 
 // store
 import configureStore from '../../store/configureStore';
 
-describe('Signup Component', () => {
-  test('renders the Signup Component', () => {
+describe('Login Component', () => {
+  test('renders the Login Component', () => {
     const store = configureStore();
     const wrapper = shallow(
       <Provider store={store}>
-        <Signup />
+        <Login />
       </Provider>
     );
     expect(wrapper.exists()).toBe(true);

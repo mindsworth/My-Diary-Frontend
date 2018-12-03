@@ -9,6 +9,11 @@ const initialState = {
       isRegistered: false,
       errorResponse: null
     },
+    login: {
+      isLoading: false,
+      errorResponse: null,
+      isAuth: false
+    },
     isAuth: false
   }
 };
