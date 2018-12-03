@@ -150,6 +150,7 @@ export class Signup extends Component {
                   onChange={this.handleOnChange}
                   name="firstName"
                   type="text"
+                  autoComplete="off"
                   placeholder="firstname"
                   className={classNames('', {
                     error: !!firstName
@@ -163,6 +164,7 @@ export class Signup extends Component {
                   onChange={this.handleOnChange}
                   name="lastName"
                   type="text"
+                  autoComplete="off"
                   placeholder="Lastname"
                   className={classNames('', {
                     error: !!lastName
