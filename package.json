@@ -11,7 +11,7 @@
     "test": " NODE_ENV=test SERVER_URL=http://localhost:5000 jest",
     "test:watch": "jest --watch",
     "test:update": "jest -u",
-    "test:coverage": "jest --verbose --coverage"
+    "coveralls": "jest --coverage && cat coverage/lcov.info | coveralls"
   },
   "jest": {
     "transform": {
@@ -47,6 +47,7 @@
     "clean-webpack-plugin": "^1.0.0",
     "compression": "^1.7.3",
     "copy-webpack-plugin": "^4.6.0",
+    "coveralls": "^3.0.2",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "enzyme-to-json": "^3.3.4",
