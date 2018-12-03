@@ -11,6 +11,9 @@ import configureStore from './store/configureStore';
 // components
 import AppRouter from './components/Router';
 
+// import styleheet
+import './styles/index.scss';
+
 const store = configureStore();
 
 ReactDOM.render(

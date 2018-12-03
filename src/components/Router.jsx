@@ -20,10 +20,6 @@ const history = createBrowserHistory();
 const AppRouter = () => (
   <Router history={history}>
     <Fragment>
-      <div>
-        <Link to="/">Home</Link>
-        <Link to="/login">Login</Link>
-      </div>
       <Switch>
         <Route path="/" component={Home} exact={true} />
         <Route path="/login" component={Login} />
