@@ -9,6 +9,10 @@ export const Header = styled.header`
   z-index: 99999;
   position: fixed;
   width: 100%;
+
+  @media (max-width: 768px) {
+    padding 1rem 0;
+  }
 `;
 
 // Create a Brand component that'll render a <a> tag with some styles
@@ -25,6 +29,10 @@ export const Logo = styled.img`
 export const ListWrap = styled.ul`
   text-align: right;
   padding-right: 3rem;
+
+  @media (max-width: 768px) {
+    padding-top: 2rem;
+  }
 `;
 
 // Create a List component that'll render a <li> tag with some styles
@@ -44,12 +52,23 @@ export const BgShapeOne = styled(BgShape)`
   height: 50%;
   top: 0;
   left: 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    top: -10rem;
+  }
 `;
 
 // Create a BgShapeTwo component that'll render a <img> tag with some styles
 export const BgShapeTwo = styled(BgShape)`
   bottom: 0;
   right: 0%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    bottom: -10rem;
+    opacity: 
+  }
 `;
 
 // Create a HeroWrap component that'll render a <div> tag with some styles
@@ -61,6 +80,10 @@ export const HeroWrap = styled.div`
 export const HeroTextSmall = styled.h3`
   margin-top: 40rem;
   line-height: 0;
+
+  @media (max-width: 768px) {
+    margin-top: 25rem;
+  }
 `;
 
 // Create a HeroTextBig component that'll render a <h1> tag with some styles

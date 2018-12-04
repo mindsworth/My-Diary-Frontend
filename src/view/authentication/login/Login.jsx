@@ -7,9 +7,9 @@ import initialState from '../../../store/initialState';
 import loginAction from '../../../action/loginAction';
 
 const mapStateToProps = (state = initialState) => ({
-  isLoading: state.loginReducer.isLoading,
-  errorResponse: state.loginReducer.errorResponse,
-  isAuth: state.loginReducer.isAuth
+  isLoading: state.login.isLoading,
+  errorResponse: state.login.errorResponse,
+  isAuth: state.login.isAuth
 });
 
 const mapDispatchToProps = dispatch => ({
