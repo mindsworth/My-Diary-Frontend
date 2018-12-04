@@ -1,9 +1,15 @@
+// third party libraries
 import http from 'axios';
+
+// action constants
 import { userConstants, SET_LOADING_STATE } from '../constants';
+
+// auth action
+import setLoggedInUser from './authAction';
 
 const loginSuccess = user => ({
   type: userConstants.LOGIN_SUCCESS,
-  payload: { user }
+  payload: user
 });
 
 const loginFailure = error => ({
@@ -16,17 +22,22 @@ const isLoading = () => ({
   payload: true
 });
 
-const loginAction = data => dispatch => {
+const loginAction = userData => dispatch => {
   dispatch(isLoading());
   const url = process.env.SERVER_URL || '';
   return http
-    .post(`${url}/api/v1/auth/login`, data)
-    .then(result => {
-      dispatch(loginSuccess(result.data));
+    .post(`${url}/api/v1/auth/login`, userData)
+    .then(({ data }) => {
+      console.log('result===>', data);
+      dispatch(loginSuccess(data));
+      dispatch(setLoggedInUser(data));
+      localStorage.setItem('myDiaryToken', data.token);
+      localStorage.setItem('user', JSON.stringify(data.user));
       return true;
     })
     .catch(({ response }) => {
       dispatch(loginFailure(response));
+      return false;
     });
 };
 export default loginAction;

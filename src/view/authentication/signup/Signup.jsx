@@ -9,9 +9,9 @@ import Signup from '../../../components/authentication/signup/Signup';
 import signupAction from '../../../action/signupAction';
 
 export const mapStateToProps = (state = initialState) => ({
-  isLoading: state.signupReducer.isLoading,
-  errorResponse: state.signupReducer.errorResponse,
-  isRegistered: state.signupReducer.isRegistered
+  isLoading: state.signup.isLoading,
+  errorResponse: state.signup.errorResponse,
+  isRegistered: state.signup.isRegistered
 });
 
 const mapDispatchToProps = dispatch => ({

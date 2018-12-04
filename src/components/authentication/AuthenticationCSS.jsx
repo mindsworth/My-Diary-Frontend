@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Layout from '../reusables/layout/LayoutCSS';
+import { Layout } from '../reusables/layout/LayoutCSS';
 
 // Create a FormWrap component that'll render a <section> tag with some styles
 export const LayoutAuth = styled(Layout)`
@@ -7,6 +7,7 @@ export const LayoutAuth = styled(Layout)`
   grid-template: 1fr;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 `;
 // Create a FormWrap component that'll render a <section> tag with some styles
 export const FormWrap = styled.div`

@@ -72,7 +72,7 @@ export class Login extends Component {
         vError[error] = '';
         this.setState({ vError });
       }
-      this.props.loginAction(user).then(result => {
+      this.props.loginAction(user).then(() => {
         const notify = message =>
           toast(message, {
             position: 'top-right',
@@ -85,9 +85,6 @@ export class Login extends Component {
           const message =
             status === 400 ? 'Your Email or Passowrd is incorrect!.' : 'Server error, please try again later.';
           notify(message);
-        }
-        if (result) {
-          notify('Logged in successfully');
         }
       });
     }
