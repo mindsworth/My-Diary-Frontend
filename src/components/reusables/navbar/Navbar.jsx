@@ -5,7 +5,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 // components
-import { Header, Brand, Logo, Nav, User, Ul, UserUl, Li, Fa, Thumbnail, ThumbnailWrap } from './NavbarCSS';
+import { Header, Brand, Logo, Nav, User, Ul, UserUl, Li, Fa } from './NavbarCSS';
+import { Thumbnail, ThumbnailWrap } from '../thumbnail/Thumbnail';
 
 /**
  *

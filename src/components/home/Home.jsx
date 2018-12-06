@@ -20,7 +20,7 @@ import {
 } from './homeCSS';
 
 // IMPORT COMPONENT
-import { Layout } from '../reusables/layout/LayoutCSS';
+import Layout from '../reusables/layout/LayoutCSS';
 import Button from '../reusables/buttons/ButtonCSS';
 
 /**

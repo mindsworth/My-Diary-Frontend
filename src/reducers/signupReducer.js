@@ -1,9 +1,9 @@
-import { userConstants, SET_LOADING_STATE } from '../constants';
+import { userConstants } from '../constants';
 import initialState from '../store/initialState';
 
 const signupReducer = (state = initialState.auth.signup, action) => {
   switch (action.type) {
-    case SET_LOADING_STATE:
+    case userConstants.REGISTER_REQUEST:
       return {
         ...state,
         isLoading: true,

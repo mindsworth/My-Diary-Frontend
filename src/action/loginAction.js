@@ -2,14 +2,13 @@
 import http from 'axios';
 
 // action constants
-import { userConstants, SET_LOADING_STATE } from '../constants';
+import { userConstants } from '../constants';
 
 // auth action
 import setLoggedInUser from './authAction';
 
-const loginSuccess = user => ({
+const loginSuccess = () => ({
   type: userConstants.LOGIN_SUCCESS,
-  payload: user
 });
 
 const loginFailure = error => ({
@@ -18,7 +17,7 @@ const loginFailure = error => ({
 });
 
 const isLoading = () => ({
-  type: SET_LOADING_STATE,
+  type: userConstants.LOGIN_REQUEST,
   payload: true
 });
 
@@ -28,12 +27,9 @@ const loginAction = userData => dispatch => {
   return http
     .post(`${url}/api/v1/auth/login`, userData)
     .then(({ data }) => {
-      console.log('result===>', data);
-      dispatch(loginSuccess(data));
+      console.log('data====>', data);
+      dispatch(loginSuccess());
       dispatch(setLoggedInUser(data));
-      localStorage.setItem('myDiaryToken', data.token);
-      localStorage.setItem('user', JSON.stringify(data.user));
-      return true;
     })
     .catch(({ response }) => {
       dispatch(loginFailure(response));

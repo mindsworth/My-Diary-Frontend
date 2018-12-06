@@ -9,7 +9,7 @@ import loginAction from '../../../action/loginAction';
 const mapStateToProps = (state = initialState) => ({
   isLoading: state.login.isLoading,
   errorResponse: state.login.errorResponse,
-  isAuth: state.login.isAuth
+  isAuth: state.auth.isAuth
 });
 
 const mapDispatchToProps = dispatch => ({

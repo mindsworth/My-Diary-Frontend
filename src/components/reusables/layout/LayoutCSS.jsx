@@ -1,20 +1,22 @@
 import styled, { css } from 'styled-components';
 
 // Create a Layout component that'll render a <section> tag with some styles
-export const Layout = styled.section`
+const Layout = styled.section`
   min-height: 100vh;
-  background-color: #ffffff;
+  background-color: #f2f2f2;
   width: 100%;
   margin: 0;
 
   ${props =>
     props.authBg &&
     css`
-      background-color: #ff6839;
+      background: linear-gradient(45deg, #ff6839 0%, #d35400 80%) !important;
+    `}
+
+  ${props =>
+    props.dashboard &&
+    css`
+      padding-top: 8rem;
     `}
 `;
-
-// Create a CardWrap component that'll render a <section> tag with some styles
-export const DLayout = styled(Layout)`
-  padding-top: 8rem;
-`;
+export default Layout;

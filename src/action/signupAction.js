@@ -1,5 +1,5 @@
 import http from 'axios';
-import { userConstants, SET_LOADING_STATE } from '../constants';
+import { userConstants } from '../constants';
 
 const signUpSuccess = user => ({
   type: userConstants.REGISTER_SUCCESS,
@@ -12,7 +12,7 @@ const signUpFailure = error => ({
 });
 
 const isLoading = () => ({
-  type: SET_LOADING_STATE,
+  type: userConstants.LOGIN_REQUEST,
   payload: true
 });
 

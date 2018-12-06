@@ -11,9 +11,9 @@ import Login from '../view/authentication/login/Login';
 import NotFound from './NotFound';
 import Signup from '../view/authentication/signup/Signup';
 import Dashboard from './dashboard/Dashboard';
+import PrivateRoute from './PrivateRoute';
 
 const history = createBrowserHistory();
-
 /**
  * @export
  * @class AppRouter
@@ -26,7 +26,7 @@ const AppRouter = () => (
         <Route path="/" component={Home} exact={true} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
-        <Route path="/dashboard" component={Dashboard} />
+        <PrivateRoute path="/dashboard" component={Dashboard} />
         <Route path="*" component={NotFound} />
       </Switch>
     </Fragment>

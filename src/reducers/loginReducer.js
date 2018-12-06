@@ -1,12 +1,12 @@
-import { userConstants, SET_LOADING_STATE } from '../constants';
+import { userConstants } from '../constants';
 import initialState from '../store/initialState';
 
 const loginReducer = (state = initialState.auth.login, action) => {
   switch (action.type) {
-    case SET_LOADING_STATE:
+    case userConstants.LOGIN_REQUEST:
       return {
         ...state,
-        isLoading: true,
+        isLoading: action.payload,
         errorResponse: null
       };
     case userConstants.LOGIN_FAILURE:
@@ -19,10 +19,10 @@ const loginReducer = (state = initialState.auth.login, action) => {
       return {
         ...state,
         isLoading: false,
-        errorResponse: null,
-        isAuth: true
+        errorResponse: null
       };
     default:
+      console.log('HellloLoginReducer');
       return state;
   }
 };

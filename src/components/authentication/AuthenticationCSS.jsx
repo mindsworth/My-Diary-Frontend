@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Layout } from '../reusables/layout/LayoutCSS';
+import Layout from '../reusables/layout/LayoutCSS';
 
 // Create a FormWrap component that'll render a <section> tag with some styles
 export const LayoutAuth = styled(Layout)`
