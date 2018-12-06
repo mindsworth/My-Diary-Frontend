@@ -2,6 +2,7 @@
 import { SET_CURRENT_USER } from '../constants';
 
 const setLoggedInUser = data => {
+  console.log('data', data);
   localStorage.setItem('myDiaryToken', data.token);
   localStorage.setItem('user', JSON.stringify(data.user));
   return {

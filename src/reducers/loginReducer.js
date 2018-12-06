@@ -22,7 +22,6 @@ const loginReducer = (state = initialState.auth.login, action) => {
         errorResponse: null
       };
     default:
-      console.log('HellloLoginReducer');
       return state;
   }
 };

@@ -27,7 +27,6 @@ const loginAction = userData => dispatch => {
   return http
     .post(`${url}/api/v1/auth/login`, userData)
     .then(({ data }) => {
-      console.log('data====>', data);
       dispatch(loginSuccess());
       dispatch(setLoggedInUser(data));
     })

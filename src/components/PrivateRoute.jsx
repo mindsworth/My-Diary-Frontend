@@ -12,7 +12,6 @@ import auth from '../helpers/TokenChecker';
  * @returns authenticated routes
  */
 const PrivateRoute = ({ component: Component, ...rest }) => {
-  console.log(localStorage.getItem('myDiaryToken'));
   return (
     <Route
       {...rest}

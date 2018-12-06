@@ -7,7 +7,8 @@ export const LayoutAuth = styled(Layout)`
   grid-template: 1fr;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding-bottom: 5rem;
 `;
 // Create a FormWrap component that'll render a <section> tag with some styles
 export const FormWrap = styled.div`
