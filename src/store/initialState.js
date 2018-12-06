@@ -11,8 +11,7 @@ const initialState = {
     },
     login: {
       isLoading: false,
-      errorResponse: null,
-      isAuth: false
+      errorResponse: null
     },
     isAuth: false
   }

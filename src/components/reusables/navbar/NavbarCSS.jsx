@@ -81,10 +81,3 @@ export const ThumbnailWrap = styled.div`
   position: relative;
   overflow: hidden;
 `;
-
-// Create a Thumbnail component that'll render a <img> tag with some styles
-export const Thumbnail = styled.img`
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-`;
