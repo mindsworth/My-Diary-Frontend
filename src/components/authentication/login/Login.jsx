@@ -92,7 +92,6 @@ export class Login extends Component {
 
   render() {
     const { email, password } = this.state.vError;
-    console.log('Hi===>', this.props.isAuth);
     if (this.props.isAuth) {
       return <Redirect to="./dashboard" />;
     }

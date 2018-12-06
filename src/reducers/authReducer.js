@@ -14,14 +14,12 @@ import signupReducer from './signupReducer';
 const authReducer = (state = initialState.auth, action) => {
   switch (action.type) {
     case SET_CURRENT_USER:
-      console.log('action.payload====>', action.payload.user);
       return {
         ...state,
         isAuth: !isEmpty(action.payload),
         user: action.payload
       };
     default:
-      console.log('action.payloadDDD====>', action);
       return {
         ...state,
         login: loginReducer(state.login, action),
